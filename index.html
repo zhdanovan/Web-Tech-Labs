@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Паспорт</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="passport">
+    <div class="passport-cover">Паспорт</div>
+    <div class="passport-info">
+      <p>Серия: <span id="series"></span></p>
+      <p>Номер: <span id="number"></span></p>
+      <p>Гражданство: <span id="citizenship"></span></p>
+      <p>Флаг: <span id="flag"></span></p>
+    </div>
+  </div>
+
+  <form id="passportForm">
+    <label for="seriesInput">Серия (3 или 4 цифры):</label>
+    <input type="text" id="seriesInput" maxlength="4" pattern="\d{3,4}">
+    <small>Серия должна содержать 3 или 4 цифры</small><br>
+
+    <label for="numberInput">Номер (6 цифр):</label>
+    <input type="text" id="numberInput" maxlength="6" pattern="\d{6}">
+    <small>Номер должен содержать 6 цифр</small><br>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

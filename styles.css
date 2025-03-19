@@ -1,0 +1,105 @@
+
+  
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background-color: #f4f4f4; 
+  }
+  
+
+  .passport {
+    width: 350px; 
+    height: 200px; 
+    background-color: #d2b48c; 
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 90px 0 0;
+  }
+
+  .passport-cover {
+    width: 100%;
+    background-color: #8b4513; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .passport-info {
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .passport-info p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .passport-info span {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  #passportForm {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #passportForm label {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  #passportForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  #passportForm small {
+    font-size: 12px;
+    color: #777;
+  }
+  
+  #passportForm button {
+    padding: 10px;
+    background-color: #8b4513; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  #passportForm button:hover {
+    background-color: #602a0b; 
+  }
