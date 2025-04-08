@@ -28,6 +28,21 @@ function initializeInputListeners() {
   numberInput.addEventListener('input', updatePassportInfo);
 }
 
+function savePassportData(series, number, country) {
+  const passports = JSON.parse(localStorage.getItem('passports')) || [];
+  
+  const isDuplicate = passports.some(passport => passport.series === series && passport.number === number);
+  if (isDuplicate) {
+    alert('Такой паспорт уже существует!');
+    return;
+  }
+
+  passports.push({ series, number, country });
+  localStorage.setItem('passports', JSON.stringify(passports));
+  updateMap();
+  alert('Паспорт успешно сохранен!');
+}
+
 function updatePassportInfo() {
   const series = document.getElementById('seriesInput').value.trim();
   const number = document.getElementById('numberInput').value.trim();
@@ -51,3 +66,4 @@ function updatePassportInfo() {
     document.getElementById('flag').textContent = ''; 
 }
 }
+
