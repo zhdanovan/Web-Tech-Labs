@@ -7,26 +7,44 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="passport">
-    <div class="passport-cover">Паспорт</div>
-    <div class="passport-info">
-      <p>Серия: <span id="series"></span></p>
-      <p>Номер: <span id="number"></span></p>
-      <p>Гражданство: <span id="citizenship"></span></p>
-      <p>Флаг: <span id="flag"></span></p>
+  <div class="container">
+    <div class="passport-book">
+      <div class="passport-cover">Паспорт</div>
+      <div class="passport-page">
+        <div class="passport-info">
+          <p>Серия: <span id="series"></span></p>
+          <p>Номер: <span id="number"></span></p>
+          <p>Гражданство: <span id="citizenship"></span></p>
+          <p>Флаг: <span id="flag"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <form id="passportForm">
+      <label for="seriesInput">Серия (3 или 4 цифры):</label>
+      <input type="text" id="seriesInput" maxlength="4" pattern="\d{3,4}">
+      <small>Серия должна содержать 3 или 4 цифры</small><br>
+
+      <label for="numberInput">Номер (6 цифр):</label>
+      <input type="text" id="numberInput" maxlength="6" pattern="\d{6}">
+      <small>Номер должен содержать 6 цифр</small><br>
+
+      <button type="submit">Сохранить паспорт</button>
+      <button type="button" id="clearDataBtn" class="danger">Очистить все</button>
+    </form>
+
+    <div class="map-container">
+      <h2>Статистика паспортов по странам</h2>
+      <div id="worldMap"></div>
+      <div id="mapTooltip" class="tooltip"></div>
+      <div id="barChartContainer">
+        <h3>Гистограмма по странам</h3>
+        <canvas id="barChart"></canvas>
+      </div>
     </div>
   </div>
 
-  <form id="passportForm">
-    <label for="seriesInput">Серия (3 или 4 цифры):</label>
-    <input type="text" id="seriesInput" maxlength="4" pattern="\d{3,4}">
-    <small>Серия должна содержать 3 или 4 цифры</small><br>
-
-    <label for="numberInput">Номер (6 цифр):</label>
-    <input type="text" id="numberInput" maxlength="6" pattern="\d{6}">
-    <small>Номер должен содержать 6 цифр</small><br>
-  </form>
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
